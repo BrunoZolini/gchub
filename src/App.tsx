@@ -1,10 +1,13 @@
-import { Home } from 'pages';
 import { GlobalProvider } from 'providers';
+import { BrowserRouter } from 'react-router-dom';
+import { PrivateRoutes } from 'routes';
 
 function App() {
   return (
     <GlobalProvider>
-      <Home />
+      <BrowserRouter>
+        <PrivateRoutes />
+      </BrowserRouter>
     </GlobalProvider>
   );
 }
