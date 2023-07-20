@@ -5,7 +5,7 @@ interface HomeProps {}
 export const Home = ({}: HomeProps) => {
   return (
     <S.Container>
-        Test
+      Home
     </S.Container>
   );
 };
