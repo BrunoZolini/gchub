@@ -37,6 +37,7 @@ body {
   width:  100vw;
   height: 100vh;
   display: flex;
+  overflow-x: hidden;
 }
 ol, ul {
 	list-style: none;
@@ -56,8 +57,8 @@ table {
 
 #root{
   display: flex;
+  position: relative;
   width: 100%;
   height: 100%;
 }
-
 `;

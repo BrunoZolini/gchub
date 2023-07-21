@@ -1,78 +1,120 @@
 import { Link as RouterLink } from 'react-router-dom';
 import styled from 'styled-components';
 
+export const Content = styled.div`
+  width: 72px;
+  position: absolute;
+  pointer-events: auto;
+  background-color: ${({ theme }) => theme.background.dark};
+  padding: 12px 0;
+  box-sizing: border-box;
+  height: 100%;
+  transition: width 300ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  border-right: 1px solid ${({ theme }) => theme.border};
+`;
+
+export const Title = styled.h1`
+  font-weight: 700;
+  font-size: 20px;
+  color: ${({ theme }) => theme.text.white};
+  opacity: 0;
+  transition: opacity 300ms;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  transition-delay: 0s, 0s;
+  transition-duration: 0.3s, 0.3s;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1), cubic-bezier(0.16, 1, 0.3, 1);
+  margin-left: 4px;
+`;
+
+export const Text = styled.p`
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0;
+  margin-left: 16px;
+  transition: opacity 300ms;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  transition-delay: 0s, 0s;
+  transition-duration: 0.3s, 0.3s;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1), cubic-bezier(0.16, 1, 0.3, 1);
+`;
+
 export const Container = styled.div`
-  background-color: #101318;
-  border-right: 1px solid #181a20;
-  color: #7f828b;
+  background-color: ${({ theme }) => theme.background.dark};
+  color: ${({ theme }) => theme.text.default};
   display: flex;
   flex-direction: column;
   width: 72px;
-  padding: 12px 0;
-  transition: width 300ms;
-  position: fixed;
   height: 100%;
-  h1 {
-    display: none;
-  }
-  p {
-    display: none;
-  }
+
   &:hover {
-    width: 240px;
-    align-items: flex-start;
-    h1 {
-      display: inline-block;
+    ${Content} {
+      width: 240px;
+      align-items: flex-start;
+      box-shadow: ${({ theme }) => theme.shadow} 0px 0px 8px 0px;
     }
-    p {
-      display: inline-block;
+    ${Title} {
+      opacity: 1;
+    }
+    ${Text} {
+      opacity: 1;
     }
   }
+`;
+
+export const Header = styled.div`
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+`;
+
+export const Body = styled.div`
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+`;
+
+export const Footer = styled.div`
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
 `;
 
 export const Logo = styled.img`
   width: 40px;
 `;
 
-export const WrapperLinkLogo = styled.div`
-  position: relative;
-  margin-left: 4px;
-  margin-bottom: 4px;
+export const LinkHeader = styled(RouterLink)`
   display: flex;
   align-items: center;
-  gap: 10px;
-`;
-export const WrapperLinkItems = styled.div`
-  position: relative;
-  margin-left: 12px;
-  display: flex;
-  align-items: center;
-`;
-
-export const Title = styled.h1`
-  font-weight: 700;
-  font-size: 20px;
-  color: #ffffff;
-  position: absolute;
-  width: max-content;
-  left: 48px;
-`;
-
-export const Text = styled.p`
-  width: max-content;
-  font-weight: 600;
-  font-size: 14px;
-  position: absolute;
-  left: 40px;
-`;
-
-export const Link = styled(RouterLink)`
-  margin-bottom: 10px;
-  color: #7e828b;
+  color: ${({ theme }) => theme.text.default};
   text-decoration: none;
-  padding: 8px 12px;
+  padding: 12px 12px;
+  width: 240px;
+  margin-left: 6px;
+  margin-bottom: 16px;
   &:hover {
     cursor: pointer;
-    color: #e2e4e9bf;
+    color: ${({ theme }) => theme.text.highlight};
+  }
+`;
+
+export const LinkItem = styled(RouterLink)`
+  display: flex;
+  align-items: center;
+  color: ${({ theme }) => theme.text.default};
+  text-decoration: none;
+  padding: 12px 12px;
+  width: 240px;
+  margin-left: 13px;
+  margin-bottom: 8px;
+  &:hover {
+    cursor: pointer;
+    color: ${({ theme }) => theme.text.highlight};
   }
 `;
