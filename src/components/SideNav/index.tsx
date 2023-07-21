@@ -1,5 +1,6 @@
+import { Image } from 'components';
 import { GiCrossedSwords, GiHammerDrop, GiHeavyHelm } from 'react-icons/gi';
-import GCLogo from '../../assets/images/gc-logo-sm.png';
+import GCLogo from '../../assets/images/logo/gc-logo-sm.png';
 import * as S from './styles';
 
 interface SideNavProps {}
@@ -9,7 +10,7 @@ export const SideNav = ({}: SideNavProps) => {
       <S.Content>
         <S.Header>
           <S.LinkHeader to='/'>
-            <S.Logo src={GCLogo} alt='Grand Chase Logo' />
+            <Image src={GCLogo} alt='Grand Chase Logo' size='md' />
             <S.Title>GC Hub</S.Title>
           </S.LinkHeader>
         </S.Header>

@@ -48,7 +48,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 72px;
   height: 100%;
-
+  z-index: 15;
   &:hover {
     ${Content} {
       width: 240px;
@@ -83,10 +83,6 @@ export const Footer = styled.div`
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-`;
-
-export const Logo = styled.img`
-  width: 40px;
 `;
 
 export const LinkHeader = styled(RouterLink)`

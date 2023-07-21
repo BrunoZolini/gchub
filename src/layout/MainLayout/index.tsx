@@ -7,7 +7,10 @@ export const MainLayout = ({}: MainLayoutProps) => {
   return (
     <S.Container>
       <SideNav />
-      <Outlet />
+      <S.Content>
+        <S.Header />
+        <Outlet />
+      </S.Content>
     </S.Container>
   );
 };
