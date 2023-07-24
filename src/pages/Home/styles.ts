@@ -1,7 +1,7 @@
 import { Image } from 'components';
 import { GiWingedShield } from 'react-icons/gi';
 
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { baseBox } from 'theme';
 
 export const Container = styled.div`
@@ -82,9 +82,37 @@ export const GuildName = styled.span`
 
 export const WrapperFilters = styled.div`
   ${baseBox}
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   box-sizing: border-box;
   background-color: ${({ theme }) => theme.background.highlight};
   border-radius: 8px;
   padding: 24px;
   width: 328px;
+`;
+
+export const WrapperCharacters = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+`;
+
+export const WrapperOrder = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const selectedChar = css`
+  background-color: ${({ theme }) => theme.primary};
+`;
+
+export const CharImage = styled(Image)<{ selected: boolean }>`
+  ${(props) => props.selected && selectedChar}
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 2px;
+  &:hover {
+    cursor: pointer;
+  }
 `;

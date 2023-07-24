@@ -10,7 +10,7 @@ export const SideNav = ({}: SideNavProps) => {
       <S.Content>
         <S.Header>
           <S.LinkHeader to='/'>
-            <Image src={GCLogo} alt='Grand Chase Logo' size='md' />
+            <Image src={GCLogo} alt='Grand Chase Logo' size='sm' />
             <S.Title>GC Hub</S.Title>
           </S.LinkHeader>
         </S.Header>

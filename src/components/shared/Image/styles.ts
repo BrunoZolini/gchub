@@ -6,9 +6,9 @@ interface ImgProps {
 }
 
 const sizes = {
-  sm: '20px',
-  md: '40px',
-  lg: '80px',
+  sm: '40px',
+  md: '80px',
+  lg: '100px',
   xl: '160px',
 };
 
