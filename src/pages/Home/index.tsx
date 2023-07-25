@@ -6,7 +6,17 @@ import * as S from './styles';
 
 interface HomeProps {}
 export const Home = ({}: HomeProps) => {
-  const [filter, setFilter] = useState<string>('');
+  const [orderBy, setOrderBy] = useState<string | undefined>(undefined);
+  const [filter, setFilter] = useState<number | undefined>(undefined);
+
+  const handleFilter = (value: number) => {
+    setOrderBy(undefined);
+    setFilter((prev) => (prev === value ? undefined : value));
+  };
+  const handleOrder = (value?: string) => {
+    setFilter(undefined);
+    setOrderBy(value);
+  };
 
   return (
     <S.Container>
@@ -29,23 +39,24 @@ export const Home = ({}: HomeProps) => {
             <Select
               ariaLabel='Order by'
               htmlFor='orderBy'
+              value={orderBy}
               options={[
                 { value: 'releaseDate', name: 'Release Date' },
                 { value: 'totalAttack', name: 'Total Attack' },
               ]}
               placeHolder='Order by'
-              setValue={setFilter}
+              setValue={handleOrder}
             />
           </S.WrapperOrder>
           <S.WrapperCharacters>
             {MOCK_CHARACTERS.slice(1).map((char) => (
               <S.CharImage
-                selected={filter === char.name}
+                selected={filter === char.id}
                 src={char.profileImg}
                 key={char.id}
                 alt={char.name}
                 size='sm'
-                onClick={() => setFilter(prev => prev === char.name ? '' : char.name)}
+                onClick={() => handleFilter(char.id)}
               />
             ))}
           </S.WrapperCharacters>

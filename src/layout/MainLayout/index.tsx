@@ -1,4 +1,4 @@
-import { SideNav } from 'components';
+import { Advertising, SideNav } from 'components';
 import { Outlet } from 'react-router-dom';
 import * as S from './styles';
 
@@ -9,7 +9,10 @@ export const MainLayout = ({}: MainLayoutProps) => {
       <SideNav />
       <S.Content>
         <S.Header />
-        <Outlet />
+        <S.WrapperContent>
+          <Outlet />
+          <Advertising />
+        </S.WrapperContent>
       </S.Content>
     </S.Container>
   );

@@ -12,7 +12,7 @@ interface SelectProps {
   defaultValue?: string;
   value?: string;
   label?: string;
-  setValue: (e: string) => void;
+  setValue: (e?: string) => void;
   htmlFor: string;
   options: Option[];
 }
@@ -27,7 +27,7 @@ export const Select = ({
   htmlFor,
 }: SelectProps) => {
   return (
-    <S.Root value={value} defaultValue={defaultValue} onValueChange={setValue}>
+    <S.Root key={value} value={value} defaultValue={defaultValue} onValueChange={setValue}>
       {!!label && <S.Label htmlFor={htmlFor}>{label}</S.Label>}
       <S.Trigger aria-label={ariaLabel} id={htmlFor}>
         <S.Value placeholder={placeHolder} />

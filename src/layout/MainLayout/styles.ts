@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const Container = styled.main`
   display: flex;
   width: 100%;
@@ -14,9 +13,14 @@ export const Content = styled.div`
   width: 100%;
   height: 100%;
   overflow-y: auto;
-`
+`;
 
 export const Header = styled.div`
   width: 100%;
   height: 72px;
+`;
+
+export const WrapperContent = styled.div`
+  display: flex;
+  width: 100%;
 `;

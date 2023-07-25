@@ -14,7 +14,7 @@ export const Trigger = styled(Select.Trigger)`
   font-weight: 600;
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   line-height: 1;
-  min-width: 120px;
+  min-width: 146px;
   height: 36px;
   gap: 12px;
   background-color: ${({ theme }) => theme.background.select};
