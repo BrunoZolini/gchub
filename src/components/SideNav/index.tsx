@@ -1,4 +1,4 @@
-import { Image } from 'components';
+import { CustomImage } from 'components';
 import { GiCrossedSwords, GiHammerDrop, GiHeavyHelm } from 'react-icons/gi';
 import GCLogo from '../../assets/images/logo/gc-logo-sm.png';
 import * as S from './styles';
@@ -10,7 +10,7 @@ export const SideNav = ({}: SideNavProps) => {
       <S.Content>
         <S.Header>
           <S.LinkHeader to='/'>
-            <Image src={GCLogo} alt='Grand Chase Logo' size='sm' />
+            <CustomImage src={GCLogo} alt='Grand Chase Logo' size='sm' />
             <S.Title>GC Hub</S.Title>
           </S.LinkHeader>
         </S.Header>

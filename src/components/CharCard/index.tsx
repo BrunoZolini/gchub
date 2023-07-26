@@ -1,4 +1,4 @@
-import { Image } from 'components/shared';
+import { CustomImage } from 'components/shared';
 import { PlayerCharacter } from 'mocks';
 import { convertNumberToK } from 'utils';
 import Berkas from '../../assets/images/items/Berkas.png';
@@ -15,14 +15,14 @@ export const CharCard = ({ char }: CharCardProps) => {
   return (
     <S.CharCardContainer>
       <S.WrapperCharacter>
-        <Image src={char.profileImg} alt={`${char.name}-profileImg`} size='md' type='rounded' />
+        <CustomImage src={char.profileImg} alt={`${char.name}-profileImg`} size='md' type='rounded' />
         <S.CharName>{char.name}</S.CharName>
       </S.WrapperCharacter>
       <S.WrapperItems>
-        {char.fullBerkas && <Image src={Berkas} alt='Berkas Armor' size='sm' />}
-        {char.harkionRing && <Image src={HarkionRing} alt='Harkion Ring' size='sm' />}
-        {char.terokaEarring && <Image src={TerokaEarring} alt='Teroka Earring' size='sm' />}
-        {char.templeEarring && <Image src={TempleOfTimeEarring} alt='Temple Of Time Earring' size='sm' />}
+        {char.fullBerkas && <CustomImage src={Berkas} alt='Berkas Armor' size='sm' />}
+        {char.harkionRing && <CustomImage src={HarkionRing} alt='Harkion Ring' size='sm' />}
+        {char.terokaEarring && <CustomImage src={TerokaEarring} alt='Teroka Earring' size='sm' />}
+        {char.templeEarring && <CustomImage src={TempleOfTimeEarring} alt='Temple Of Time Earring' size='sm' />}
       </S.WrapperItems>
       <S.WrapperTotalAttack>
         <S.TotalAttackTitle>Total Attack</S.TotalAttackTitle>

@@ -1,4 +1,4 @@
-import { Image } from 'components';
+import { CustomImage } from 'components';
 import { GiWingedShield } from "react-icons/gi";
 import styled from "styled-components";
 
@@ -14,9 +14,9 @@ export const WrapperImg = styled.div`
   padding-bottom: 6px;
 `;
 
-export const ProfileImg = styled(Image)`
+export const ProfileImg = styled(CustomImage)`
   padding: 1px;
-  border: 2px solid ${({ theme }) => theme.background.highlight};
+  border: 2px solid ${({ theme }) => theme.border};
 `;
 
 export const ChaserLvl = styled.span`

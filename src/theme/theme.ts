@@ -3,6 +3,8 @@ import { css } from "styled-components";
 export const theme = {
   colors: {
     white: '#FFFFFF',
+    transparent: '#00000000',
+    night_steel_blue: '#272a3040',
   },
   text: {
     default: '#7e828b',
@@ -19,7 +21,7 @@ export const theme = {
     highlight: '#181a20',
     body: '#0e1015',
   },
-  border: '#181a20',
+  border: '#272a30',
   shadow: '#07090e',
   primary: '#db8115',
   secondary: '#f3c414',

@@ -1,4 +1,4 @@
-import { Image } from 'components';
+import { CustomImage } from 'components';
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div<{ imgGap: string }>`
@@ -17,7 +17,7 @@ const clickableChar = css`
   }
 `;
 
-export const CharImage = styled(Image)<{ selected: boolean; clickable?: boolean }>`
+export const CharImage = styled(CustomImage)<{ selected: boolean; clickable?: boolean }>`
   ${(props) => props.selected && selectedChar}
   ${(props) => props.clickable && clickableChar}
   box-sizing: border-box;

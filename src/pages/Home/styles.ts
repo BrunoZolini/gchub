@@ -1,4 +1,3 @@
-import { CharCardContainer } from 'components/CharCard/styles';
 import styled from 'styled-components';
 import { baseBox } from 'theme';
 
@@ -55,16 +54,6 @@ export const WrapperPlayerChars = styled.div`
   &::-webkit-scrollbar {
     width: 0;
   }
-  > * {
-    &${CharCardContainer}:first-child {
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
-    }
-    &${CharCardContainer}:last-child {
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
-    }
-  }
 `;
 
 export const TotalAttackTitle = styled.span<{ isFirst?: boolean }>`
@@ -72,7 +61,11 @@ export const TotalAttackTitle = styled.span<{ isFirst?: boolean }>`
   font-size: 14px;
   font-weight: 600;
   padding: 10px 16px;
-  background-color: ${({ theme }) => theme.background.select};
+  background-color: ${({ theme }) => theme.colors.transparent};
+  background-image: linear-gradient(
+    ${({ theme }) => theme.colors.transparent},
+    ${({ theme }) => theme.colors.night_steel_blue}
+  );
 `;
 
 export const WrapperTotalAttackImg = styled.div`

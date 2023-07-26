@@ -11,7 +11,7 @@ export const Content = styled.div`
   height: 100%;
   transition: width 300ms;
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-  border-right: 1px solid ${({ theme }) => theme.border};
+  border-right: 1px solid ${({ theme }) => theme.background.highlight};
 `;
 
 export const Title = styled.h1`
