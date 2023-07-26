@@ -21,6 +21,10 @@ export const Header = styled.div`
 `;
 
 export const WrapperContent = styled.div`
+  box-sizing: border-box;
+  justify-content: center;
+  padding: 0 16px;
   display: flex;
+  gap: 16px;
   width: 100%;
 `;

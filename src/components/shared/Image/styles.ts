@@ -1,15 +1,33 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface ImgProps {
   type: 'square' | 'circle' | 'rounded';
   size: 'sm' | 'md' | 'lg' | 'xl';
 }
 
+const sizeSM = css`
+  width: 40px;
+  height: 30px;
+`;
+const sizeMD = css`
+  width: 75px;
+  height: 56px;
+`;
+const sizeLG = css`
+  width: 100px;
+  height: 74px;
+`;
+
+const sizeXL = css`
+  width: 160px;
+  height: 118px;
+`;
+
 const sizes = {
-  sm: '40px',
-  md: '80px',
-  lg: '100px',
-  xl: '160px',
+  sm: sizeSM,
+  md: sizeMD,
+  lg: sizeLG,
+  xl: sizeXL,
 };
 
 const types = {
@@ -19,6 +37,6 @@ const types = {
 };
 
 export const Img = styled.img<ImgProps>`
-  width: ${({ size }) => sizes[size]};
+  ${(props) => sizes[props.size]}
   border-radius: ${({ type }) => types[type]};
 `;

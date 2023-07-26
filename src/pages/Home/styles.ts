@@ -1,83 +1,29 @@
-import { Image } from 'components';
-import { GiWingedShield } from 'react-icons/gi';
-
-import styled, { css } from 'styled-components';
+import { CharCardContainer } from 'components/CharCard/styles';
+import styled from 'styled-components';
 import { baseBox } from 'theme';
 
 export const Container = styled.div`
-  box-sizing: border-box;
-  width: 100%;
-  min-width: 520px;
-  padding: 16px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+`;
+
+export const Content = styled.div`
+  box-sizing: border-box;
+  min-width: 520px;
+  display: flex;
   gap: 16px;
   position: relative;
 `;
 
 export const Column = styled.div`
   height: 100%;
+  width: max-content;
   box-sizing: border-box;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 16px;
-`;
-
-export const WrapperProfile = styled.div`
-  display: flex;
-  gap: 16px;
-`;
-
-export const WrapperImg = styled.div`
-  display: flex;
-  justify-content: center;
-  position: relative;
-  padding-bottom: 6px;
-`;
-
-export const ProfileImg = styled(Image)`
-  padding: 1px;
-  border: 2px solid ${({ theme }) => theme.background.highlight};
-`;
-
-export const ChaserLvl = styled.span`
-  background-color: ${({ theme }) => theme.background.body};
-  border-radius: 40px;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 2px 8px;
-  position: absolute;
-  bottom: 0;
-`;
-
-export const WrapperText = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 6px;
-`;
-
-export const Name = styled.span`
-  color: ${({ theme }) => theme.text.highlight};
-  font-weight: 700;
-  font-size: 24px;
-`;
-
-export const WrapperGuild = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-export const GuildIcon = styled(GiWingedShield)`
-  fill: ${({ theme }) => theme.secondary};
-`;
-
-export const GuildName = styled.span`
-  color: ${({ theme }) => theme.text.default};
-  font-weight: 700;
-  font-size: 14px;
-  margin-left: 6px;
 `;
 
 export const WrapperFilters = styled.div`
@@ -92,27 +38,56 @@ export const WrapperFilters = styled.div`
   width: 328px;
 `;
 
-export const WrapperCharacters = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-`;
-
 export const WrapperOrder = styled.div`
   display: flex;
   justify-content: space-between;
 `;
 
-const selectedChar = css`
-  background-color: ${({ theme }) => theme.primary};
+export const WrapperPlayerChars = styled.div`
+  width: 656px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 738px;
+  gap: 2px;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  > * {
+    &${CharCardContainer}:first-child {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    &${CharCardContainer}:last-child {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
 `;
 
-export const CharImage = styled(Image)<{ selected: boolean }>`
-  ${(props) => props.selected && selectedChar}
+export const TotalAttackTitle = styled.span<{ isFirst?: boolean }>`
+  border-radius: ${(props) => (props.isFirst ? '8px 8px 0 0' : '0')};
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 16px;
+  background-color: ${({ theme }) => theme.background.select};
+`;
+
+export const WrapperTotalAttackImg = styled.div`
+  padding: 10px 16px;
+`;
+
+export const TotalAttackSummary = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const WrapperTotalAttackSummary = styled.div`
+  ${baseBox}
   box-sizing: border-box;
-  border-radius: 4px;
-  padding: 2px;
-  &:hover {
-    cursor: pointer;
-  }
+  width: 328px;
+  display: flex;
+  flex-direction: column;
 `;

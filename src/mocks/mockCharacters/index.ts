@@ -133,3 +133,4 @@ export const MOCK_CHARACTERS = [
     profileImg: profileAi,
   },
 ];
+
