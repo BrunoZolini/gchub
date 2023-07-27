@@ -30,6 +30,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileElesis,
   },
   {
@@ -41,6 +42,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileLire,
   },
   {
@@ -52,6 +54,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileArme,
   },
   {
@@ -63,6 +66,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileLass,
   },
   {
@@ -74,6 +78,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileRyan,
   },
   {
@@ -85,6 +90,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileRonan,
   },
   {
@@ -96,6 +102,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileAmy,
   },
   {
@@ -107,6 +114,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileJin,
   },
   {
@@ -118,6 +126,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileSieghart,
   },
   {
@@ -129,6 +138,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileMari,
   },
   {
@@ -140,6 +150,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileDio,
   },
   {
@@ -151,6 +162,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileZero,
   },
   {
@@ -162,6 +174,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileRey,
   },
   {
@@ -173,6 +186,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileLupus,
   },
   {
@@ -184,6 +198,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileLin,
   },
   {
@@ -195,6 +210,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileAzin,
   },
   {
@@ -206,6 +222,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileHoly,
   },
   {
@@ -217,6 +234,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileEdel,
   },
   {
@@ -228,6 +246,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileVeigas,
   },
   {
@@ -239,6 +258,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileDecane,
   },
   {
@@ -250,6 +270,7 @@ export const MOCK_PLAYER_CHARACTERS = [
     terokaEarring: false,
     templeEarring: false,
     harkionRing: false,
+    maxTaintResistance: 0,
     profileImg: profileAi,
   },
 ];
