@@ -1,6 +1,7 @@
 import { CustomImage } from 'components';
 import { GiWingedShield } from "react-icons/gi";
 import styled from "styled-components";
+import { Colors } from 'theme';
 
 export const WrapperProfile = styled.div`
   display: flex;
@@ -16,11 +17,11 @@ export const WrapperImg = styled.div`
 
 export const ProfileImg = styled(CustomImage)`
   padding: 1px;
-  border: 2px solid ${({ theme }) => theme.border};
+  border: 2px solid ${Colors.midnightNavy};
 `;
 
 export const ChaserLvl = styled.span`
-  background-color: ${({ theme }) => theme.background.body};
+  background-color: ${Colors.darkMidnightNavy};
   border-radius: 40px;
   font-size: 12px;
   font-weight: 700;
@@ -37,7 +38,7 @@ export const WrapperText = styled.div`
 `;
 
 export const Name = styled.span`
-  color: ${({ theme }) => theme.text.highlight};
+  color: ${Colors.lightBlueGray};
   font-weight: 700;
   font-size: 24px;
 `;
@@ -48,11 +49,11 @@ export const WrapperGuild = styled.div`
 `;
 
 export const GuildIcon = styled(GiWingedShield)`
-  fill: ${({ theme }) => theme.secondary};
+  fill: ${Colors.goldenrod};
 `;
 
 export const GuildName = styled.span`
-  color: ${({ theme }) => theme.text.default};
+  color: ${Colors.defaultText};
   font-weight: 700;
   font-size: 14px;
   margin-left: 6px;

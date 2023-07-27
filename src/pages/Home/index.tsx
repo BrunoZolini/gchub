@@ -3,6 +3,7 @@ import { CharCard, CharsGrid, PlayerProfile, Select } from 'components';
 import { MOCK_CHARACTERS, PlayerCharacter, PlayerCharacters } from 'mocks';
 import { useEffect, useMemo, useState } from 'react';
 import { getPlayerCharacters } from 'services/getPlayerCharacters';
+import { convertNumberToK } from 'utils';
 import * as S from './styles';
 
 interface HomeProps {}
@@ -83,7 +84,8 @@ export const Home = ({}: HomeProps) => {
               .map((attackGroup, index) => (
                 <S.TotalAttackSummary key={attackGroup}>
                   <S.TotalAttackTitle isFirst={index === 0}>
-                    Total Attack: {attackGroup}K - {Number(attackGroup) - 100}K
+                    Total Attack: {convertNumberToK(Number(attackGroup) * 1000)} -{' '}
+                    {convertNumberToK((Number(attackGroup) - 100) * 1000)}
                   </S.TotalAttackTitle>
                   <S.WrapperTotalAttackImg>
                     <CharsGrid

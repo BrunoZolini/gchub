@@ -1,5 +1,6 @@
 import { CustomImage } from 'components';
 import styled, { css } from 'styled-components';
+import { Colors } from 'theme';
 
 export const Container = styled.div<{ imgGap: string }>`
   display: flex;
@@ -8,7 +9,7 @@ export const Container = styled.div<{ imgGap: string }>`
 `;
 
 const selectedChar = css`
-  background-color: ${({ theme }) => theme.primary};
+  background-color: ${Colors.pumpkinOrange};
 `;
 
 const clickableChar = css`

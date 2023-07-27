@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { Colors } from 'theme';
 
 export const CharCardContainer = styled.div`
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  background-color: ${({ theme }) => theme.background.highlight};
+  background-color: ${Colors.deepCharcoal};
   padding: 16px;
   min-height: 100px;
   width: 100%;
@@ -31,12 +32,14 @@ export const CharName = styled.div`
 
 export const WrapperCharacter = styled.div`
   display: flex;
+  min-width: 164px;
 `;
 
 export const WrapperItems = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-end;
+  min-width: 190px;
   gap: 10px;
 `;
 

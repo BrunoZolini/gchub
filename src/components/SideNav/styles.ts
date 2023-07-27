@@ -1,23 +1,24 @@
 import { Link as RouterLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { Colors } from 'theme';
 
 export const Content = styled.div`
   width: 72px;
   position: absolute;
   pointer-events: auto;
-  background-color: ${({ theme }) => theme.background.dark};
+  background-color: ${Colors.midnightBlack};
   padding: 12px 0;
   box-sizing: border-box;
   height: 100%;
   transition: width 300ms;
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-  border-right: 1px solid ${({ theme }) => theme.background.highlight};
+  border-right: 1px solid ${Colors.deepCharcoal};
 `;
 
 export const Title = styled.h1`
   font-weight: 700;
   font-size: 20px;
-  color: ${({ theme }) => theme.text.white};
+  color: ${Colors.white};
   opacity: 0;
   transition: opacity 300ms;
   transform: matrix(1, 0, 0, 1, 0, 0);
@@ -42,8 +43,8 @@ export const Text = styled.p`
 `;
 
 export const Container = styled.div`
-  background-color: ${({ theme }) => theme.background.dark};
-  color: ${({ theme }) => theme.text.default};
+  background-color: ${Colors.midnightBlack};
+  color: ${Colors.defaultText};
   display: flex;
   flex-direction: column;
   width: 72px;
@@ -53,7 +54,7 @@ export const Container = styled.div`
     ${Content} {
       width: 240px;
       align-items: flex-start;
-      box-shadow: ${({ theme }) => theme.shadow} 0px 0px 8px 0px;
+      box-shadow: ${Colors.darkMidnightBlue} 0px 0px 8px 0px;
     }
     ${Title} {
       opacity: 1;
@@ -88,7 +89,7 @@ export const Footer = styled.div`
 export const LinkHeader = styled(RouterLink)`
   display: flex;
   align-items: center;
-  color: ${({ theme }) => theme.text.default};
+  color: ${Colors.defaultText};
   text-decoration: none;
   padding: 12px 12px;
   width: 240px;
@@ -96,14 +97,14 @@ export const LinkHeader = styled(RouterLink)`
   margin-bottom: 16px;
   &:hover {
     cursor: pointer;
-    color: ${({ theme }) => theme.text.highlight};
+    color: ${Colors.lightBlueGray};
   }
 `;
 
 export const LinkItem = styled(RouterLink)`
   display: flex;
   align-items: center;
-  color: ${({ theme }) => theme.text.default};
+  color: ${Colors.defaultText};
   text-decoration: none;
   padding: 12px 12px;
   width: 240px;
@@ -111,6 +112,6 @@ export const LinkItem = styled(RouterLink)`
   margin-bottom: 8px;
   &:hover {
     cursor: pointer;
-    color: ${({ theme }) => theme.text.highlight};
+    color: ${Colors.lightBlueGray};
   }
 `;

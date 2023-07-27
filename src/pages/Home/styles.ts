@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { baseBox } from 'theme';
+import { Colors, baseBox } from 'theme';
 
 export const Container = styled.div`
   display: flex;
@@ -31,7 +31,7 @@ export const WrapperFilters = styled.div`
   flex-direction: column;
   gap: 20px;
   box-sizing: border-box;
-  background-color: ${({ theme }) => theme.background.highlight};
+  background-color: ${Colors.deepCharcoal};
   border-radius: 8px;
   padding: 24px;
   width: 328px;
@@ -61,11 +61,10 @@ export const TotalAttackTitle = styled.span<{ isFirst?: boolean }>`
   font-size: 14px;
   font-weight: 600;
   padding: 10px 16px;
-  background-color: ${({ theme }) => theme.colors.transparent};
-  background-image: linear-gradient(
-    ${({ theme }) => theme.colors.transparent},
-    ${({ theme }) => theme.colors.night_steel_blue}
-  );
+  border-top: 1px solid ${Colors.mistyIndigo};
+  background-color: ${Colors.transparent};
+  background-image: linear-gradient(${Colors.transparent}, ${Colors.nightSteelBlue});
+  box-shadow: ${Colors.mistyIndigo} 0px -1px 0px 0px inset;
 `;
 
 export const WrapperTotalAttackImg = styled.div`

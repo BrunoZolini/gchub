@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { Colors } from 'theme';
 
 export const Container = styled.main`
   display: flex;
   width: 100%;
   height: 100%;
-  background: ${({theme}) => theme.background.body };
-  color: ${({theme}) => theme.text.default};
+  background: ${Colors.darkMidnightNavy};
+  color: ${Colors.defaultText};
   position: relative;
 `;
 
