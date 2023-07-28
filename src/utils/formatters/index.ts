@@ -8,7 +8,8 @@ export const convertNumberToK = (number: number) => {
     number = number / 1000;
     magnitude++;
   }
-  const formattedNumber: string = number.toFixed(0);
+  let formattedNumber: string = number.toFixed(0);
+  if (number < 100) formattedNumber = number.toFixed(1);
   const suffix: string = suffixes[magnitude];
   return `${formattedNumber}${suffix}`;
-}
+};

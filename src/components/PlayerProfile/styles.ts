@@ -1,11 +1,15 @@
 import { CustomImage } from 'components';
-import { GiWingedShield } from "react-icons/gi";
-import styled from "styled-components";
+import { GiCheckMark, GiPencil, GiWingedShield } from 'react-icons/gi';
+import styled from 'styled-components';
 import { Colors } from 'theme';
 
-export const WrapperProfile = styled.div`
+export const WrapperProfile = styled.div<{ isEditing: boolean }>`
   display: flex;
   gap: 16px;
+  width: min-content;
+  &:hover {
+    cursor: ${(props) => (!props.isEditing ? 'pointer' : 'auto')};
+  }
 `;
 
 export const WrapperImg = styled.div`
@@ -51,6 +55,13 @@ export const WrapperGuild = styled.div`
 export const GuildIcon = styled(GiWingedShield)`
   fill: ${Colors.goldenrod};
 `;
+export const PencilIcon = styled(GiPencil)`
+  fill: ${Colors.slateGray};
+`;
+export const CheckIcon = styled(GiCheckMark)`
+  fill: ${Colors.slateGray};
+  cursor: pointer;
+`;
 
 export const GuildName = styled.span`
   color: ${Colors.defaultText};
@@ -58,3 +69,13 @@ export const GuildName = styled.span`
   font-size: 14px;
   margin-left: 6px;
 `;
+
+export const WrapperEditingIcons = styled.div`
+  background-color: ${Colors.darkGunmetal};
+  height: min-content;
+  width: min-content;
+  padding: 4px 4px 2px 4px;
+  border-radius: 40px;
+`;
+
+export const ChangeImage = styled.span``
