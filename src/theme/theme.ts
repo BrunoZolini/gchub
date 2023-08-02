@@ -7,7 +7,8 @@ export const theme = {
     white: "#FFFFFF",
     lightBlueGrayTransparent: "#e2e4e926",
     lightBlueGray: "#e2e4e9",
-    mistyIndigo: "#484b5126",
+    mistyIndigoTransparent: "#484b5126",
+    mistyIndigo: "#484b51",
     goldenrod: "#f3c414",
     pumpkinOrange: "#db8115",
     slateBlueGray: "#999ca3",
@@ -18,7 +19,8 @@ export const theme = {
     deepCharcoal: "#181a20",
     darkGunmetal: "#353940",
     darkMidnightBlue: "#07090e",
-    midnightBlack: "#101318"
+    midnightBlack: "#101318",
+    deepNightShade: "#13151b",
   },
 } as const;
 

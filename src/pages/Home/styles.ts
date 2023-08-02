@@ -61,10 +61,10 @@ export const TotalAttackTitle = styled.span<{ isFirst?: boolean }>`
   font-size: 14px;
   font-weight: 600;
   padding: 10px 16px;
-  border-top: 1px solid ${Colors.mistyIndigo};
+  border-top: 1px solid ${Colors.mistyIndigoTransparent};
   background-color: ${Colors.transparent};
   background-image: linear-gradient(${Colors.transparent}, ${Colors.nightSteelBlue});
-  box-shadow: ${Colors.mistyIndigo} 0px -1px 0px 0px inset;
+  box-shadow: ${Colors.mistyIndigoTransparent} 0px -1px 0px 0px inset;
 `;
 
 export const WrapperTotalAttackImg = styled.div`

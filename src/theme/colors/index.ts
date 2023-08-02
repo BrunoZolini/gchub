@@ -4,6 +4,7 @@ export const transparent = ({theme}: {theme: DefaultTheme}) => theme.colors.tran
 export const white = ({theme}: {theme: DefaultTheme}) => theme.colors.white;
 export const lightBlueGrayTransparent = ({theme}: {theme: DefaultTheme}) => theme.colors.lightBlueGrayTransparent;
 export const lightBlueGray = ({theme}: {theme: DefaultTheme}) => theme.colors.lightBlueGray;
+export const mistyIndigoTransparent = ({theme}: {theme: DefaultTheme}) => theme.colors.mistyIndigoTransparent;
 export const mistyIndigo = ({theme}: {theme: DefaultTheme}) => theme.colors.mistyIndigo;
 export const goldenrod = ({theme}: {theme: DefaultTheme}) => theme.colors.goldenrod;
 export const pumpkinOrange = ({theme}: {theme: DefaultTheme}) => theme.colors.pumpkinOrange;
@@ -16,6 +17,7 @@ export const deepCharcoal = ({theme}: {theme: DefaultTheme}) => theme.colors.dee
 export const darkGunmetal = ({theme}: {theme: DefaultTheme}) => theme.colors.darkGunmetal;
 export const darkMidnightBlue = ({theme}: {theme: DefaultTheme}) => theme.colors.darkMidnightBlue;
 export const midnightBlack = ({theme}: {theme: DefaultTheme}) => theme.colors.midnightBlack;
+export const deepNightShade = ({theme}: {theme: DefaultTheme}) => theme.colors.deepNightShade;
 
 
 export const defaultText = ({theme}: {theme: DefaultTheme}) => theme.colors.slateGray;
