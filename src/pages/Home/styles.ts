@@ -56,8 +56,8 @@ export const WrapperPlayerChars = styled.div`
   }
 `;
 
-export const TotalAttackTitle = styled.span<{ isFirst?: boolean }>`
-  border-radius: ${(props) => (props.isFirst ? '8px 8px 0 0' : '0')};
+export const TotalAttackTitle = styled.span<{ $isFirst?: boolean }>`
+  border-radius: ${(props) => (props.$isFirst ? '8px 8px 0 0' : '0')};
   font-size: 14px;
   font-weight: 600;
   padding: 10px 16px;

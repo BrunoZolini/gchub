@@ -74,7 +74,6 @@ export const Home = ({}: HomeProps) => {
               imgSize='sm'
               handleClick={handleFilter}
               title='name'
-              clickable={true}
             />
           </S.WrapperFilters>
 
@@ -83,7 +82,7 @@ export const Home = ({}: HomeProps) => {
               .sort((a, b) => Number(b) - Number(a))
               .map((attackGroup, index) => (
                 <S.TotalAttackSummary key={attackGroup}>
-                  <S.TotalAttackTitle isFirst={index === 0}>
+                  <S.TotalAttackTitle $isFirst={index === 0}>
                     Total Attack: {convertNumberToK(Number(attackGroup) * 1000)} -{' '}
                     {convertNumberToK((Number(attackGroup) - 100) * 1000)}
                   </S.TotalAttackTitle>

@@ -3,11 +3,12 @@ import { MOCK_CHARACTERS, PlayerInfo } from 'mocks';
 import { useEffect, useState } from 'react';
 import { getPlayerInfo, updatePlayerInfo } from 'services';
 
+import { onlyPositiveNumbers } from 'utils';
 import * as S from './styles';
 
 interface PlayerProfileProps {}
 export const PlayerProfile = ({}: PlayerProfileProps) => {
-  const [playerInfo, setPlayerInfo] = useState({} as PlayerInfo);
+  const [playerInfo, setPlayerInfo] = useState<PlayerInfo>();
   const [editingStatus, setEditingStatus] = useState<'hoverIn' | 'hoverOut' | 'editing'>('hoverOut');
   const [hoverImage, setHoverImage] = useState(false);
   const [charsImagesOpen, setCharsImagesOpen] = useState(false);
@@ -16,25 +17,22 @@ export const PlayerProfile = ({}: PlayerProfileProps) => {
     setPlayerInfo(getPlayerInfo());
   }, []);
 
-  const handleMouseOver = () => {
-    if (editingStatus !== 'editing') setEditingStatus('hoverIn');
-  };
+  const isEditing = editingStatus === 'editing';
 
-  const handleMouseOut = () => {
-    if (editingStatus !== 'editing') setEditingStatus('hoverOut');
-  };
+  const handleMouseOver = () => !isEditing && setEditingStatus('hoverIn');
 
-  const handleClick = () => {
-    if (editingStatus !== 'editing') setEditingStatus('editing');
-  };
+  const handleMouseOut = () => !isEditing && setEditingStatus('hoverOut');
+
+  const handleClick = () => !isEditing && setEditingStatus('editing');
 
   const handleSave = () => {
     setEditingStatus('hoverIn');
+    if (!playerInfo) return;
     updatePlayerInfo(playerInfo);
   };
 
   const editProfile = (key: keyof PlayerInfo, value: string) => {
-    setPlayerInfo((prev) => ({ ...prev, [key]: value }));
+    setPlayerInfo((prev) => ({ ...(prev ?? ({} as PlayerInfo)), [key]: value }));
   };
 
   const handleCloseSelectImage = () => {
@@ -49,12 +47,11 @@ export const PlayerProfile = ({}: PlayerProfileProps) => {
     handleCloseSelectImage();
   };
 
-  const isEditing = editingStatus === 'editing';
+  if (!playerInfo) return <div>Loading</div>;
 
-  console.log(editingStatus);
   return (
     <S.WrapperProfile
-      isEditing={isEditing}
+      $isEditing={isEditing}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
       onClick={handleClick}
@@ -71,7 +68,6 @@ export const PlayerProfile = ({}: PlayerProfileProps) => {
             </S.WrapperChars>
             <CharsGrid
               characters={MOCK_CHARACTERS}
-              clickable
               handleClick={handleSelectImage}
               imgSize='sm'
               imgGap='4px'
@@ -82,9 +78,10 @@ export const PlayerProfile = ({}: PlayerProfileProps) => {
         {!isEditing && <S.ChaserLvl title={`C-Lv. ${playerInfo.chaserLevel}`}>{playerInfo.chaserLevel}</S.ChaserLvl>}
         {isEditing && (
           <S.ChaserLvlInput
-            type='number'
+            type='text'
             value={playerInfo.chaserLevel}
-            onChange={(e) => editProfile('chaserLevel', e.target.value)}
+            maxLength={3}
+            onChange={(e) => editProfile('chaserLevel', onlyPositiveNumbers(e.target.value))}
           />
         )}
       </S.WrapperImg>

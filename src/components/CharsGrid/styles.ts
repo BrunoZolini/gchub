@@ -2,10 +2,10 @@ import { CustomImage } from 'components';
 import styled, { css } from 'styled-components';
 import { Colors } from 'theme';
 
-export const Container = styled.div<{ imgGap: string }>`
+export const Container = styled.div<{ $imgGap: string }>`
   display: flex;
   flex-wrap: wrap;
-  gap: ${(props) => props.imgGap};
+  gap: ${(props) => props.$imgGap};
 `;
 
 const selectedChar = css`
@@ -18,9 +18,9 @@ const clickableChar = css`
   }
 `;
 
-export const CharImage = styled(CustomImage)<{ selected: boolean; clickable?: boolean }>`
+export const CharImage = styled(CustomImage)<{ selected: boolean; $clickable?: boolean }>`
   ${(props) => props.selected && selectedChar}
-  ${(props) => props.clickable && clickableChar}
+  ${(props) => props.$clickable && clickableChar}
   box-sizing: border-box;
   border-radius: 4px;
   padding: 2px;

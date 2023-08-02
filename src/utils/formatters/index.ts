@@ -13,3 +13,5 @@ export const convertNumberToK = (number: number) => {
   const suffix: string = suffixes[magnitude];
   return `${formattedNumber}${suffix}`;
 };
+
+export const onlyPositiveNumbers = (value: string) => value.replace(/[^0-9]/g, '')

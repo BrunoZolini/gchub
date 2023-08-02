@@ -6,7 +6,6 @@ type Character = { id: number; name: string; profileImg: string; [key: string]: 
 interface CharsGridProps {
   characters: Character[];
   handleClick?: (id: number) => void;
-  clickable?: boolean;
   selectedId?: number;
   imgSize?: 'sm' | 'md' | 'lg' | 'xl';
   imgType?: 'square' | 'circle' | 'rounded';
@@ -20,7 +19,6 @@ export const CharsGrid = ({
   imgSize,
   imgType,
   imgGap,
-  clickable,
   title,
 }: CharsGridProps) => {
   const titleRule = (attribute: string | undefined, char: Character) => {
@@ -32,7 +30,7 @@ export const CharsGrid = ({
   };
 
   return (
-    <S.Container imgGap={imgGap}>
+    <S.Container $imgGap={imgGap}>
       {characters.map((char) => (
         <S.CharImage
           selected={selectedId === char.id}
@@ -41,8 +39,8 @@ export const CharsGrid = ({
           alt={char.name}
           size={imgSize}
           type={imgType}
-          onClick={() => handleClick && handleClick(char.id)}
-          clickable={clickable}
+          onClick={() => !!handleClick && handleClick(char.id)}
+          $clickable={!!handleClick}
           title={!!title && titleRule(title, char)}
         />
       ))}

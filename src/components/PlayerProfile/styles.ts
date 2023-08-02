@@ -5,12 +5,12 @@ import styled from 'styled-components';
 import { Colors, defaultFontFamily } from 'theme';
 
 
-export const WrapperProfile = styled.div<{ isEditing: boolean }>`
+export const WrapperProfile = styled.div<{ $isEditing: boolean }>`
   display: flex;
   gap: 16px;
   width: min-content;
   &:hover {
-    cursor: ${(props) => (!props.isEditing ? 'pointer' : 'auto')};
+    cursor: ${(props) => (!props.$isEditing ? 'pointer' : 'auto')};
   }
 `;
 
@@ -56,9 +56,6 @@ export const ChaserLvl = styled.span`
 
 export const ChaserLvlInput = styled.input`
   ${defaultFontFamily}
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-  }
   text-align: center;
   outline: none;
   border: 1px solid ${Colors.midnightNavy};
