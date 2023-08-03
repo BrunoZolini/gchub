@@ -1,7 +1,7 @@
 import { MOCK_PLAYER_CHARACTERS, PlayerCharacter, PlayerCharacters } from 'mocks';
 import { customLocalStorage } from 'utils';
 
-export const getPlayerCharactersById = (id: number): PlayerCharacter => {
+export const getPlayerCharacterById = (id: number): PlayerCharacter => {
   let playerCharacters = customLocalStorage.getItem<PlayerCharacters>('playerCharacters');
   if (!playerCharacters) {
     customLocalStorage.setItem<PlayerCharacters>('playerCharacters', MOCK_PLAYER_CHARACTERS);
